@@ -103,7 +103,7 @@ export default function QuoteModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fadeIn">
       <div className="relative w-full max-w-2xl bg-white border-2 border-yellow-300 rounded-3xl shadow-2xl overflow-hidden p-6 sm:p-8 max-h-[95vh] overflow-y-auto">
-        
+
         {/* Decorative subtle yellow gradient glow */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-200/40 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-100/50 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
@@ -136,11 +136,10 @@ export default function QuoteModal({
             <div className="flex items-center justify-between mb-8 pb-4 border-b border-yellow-100">
               <div className="flex items-center gap-2">
                 <div
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
-                    step >= 1
+                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${step >= 1
                       ? "bg-gradient-to-r from-yellow-400 to-amber-500 text-slate-950 shadow-sm"
                       : "bg-gray-100 text-gray-400"
-                  }`}
+                    }`}
                 >
                   1
                 </div>
@@ -153,11 +152,10 @@ export default function QuoteModal({
 
               <div className="flex items-center gap-2">
                 <div
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
-                    step >= 2
+                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${step >= 2
                       ? "bg-gradient-to-r from-yellow-400 to-amber-500 text-slate-950 shadow-sm"
                       : "bg-gray-100 text-gray-400"
-                  }`}
+                    }`}
                 >
                   2
                 </div>
@@ -170,11 +168,10 @@ export default function QuoteModal({
 
               <div className="flex items-center gap-2">
                 <div
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
-                    step >= 3
+                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${step >= 3
                       ? "bg-gradient-to-r from-yellow-400 to-amber-500 text-slate-950 shadow-sm"
                       : "bg-gray-100 text-gray-400"
-                  }`}
+                    }`}
                 >
                   3
                 </div>
@@ -197,11 +194,10 @@ export default function QuoteModal({
                         type="button"
                         key={opt}
                         onClick={() => setEquipmentType(opt)}
-                        className={`p-3 rounded-xl text-left text-xs font-semibold border transition-all cursor-pointer ${
-                          equipmentType === opt
+                        className={`p-3 rounded-xl text-left text-xs font-semibold border transition-all cursor-pointer ${equipmentType === opt
                             ? "bg-gradient-to-r from-yellow-50 to-amber-50 border-yellow-400 text-yellow-900 shadow-sm font-bold"
                             : "bg-white border-gray-200 text-gray-700 hover:border-yellow-300 hover:bg-yellow-50/30"
-                        }`}
+                          }`}
                       >
                         {opt}
                       </button>
@@ -236,11 +232,10 @@ export default function QuoteModal({
                         type="button"
                         key={scale}
                         onClick={() => setTonnageScale(scale)}
-                        className={`p-2.5 rounded-xl text-center text-xs font-semibold border transition-all cursor-pointer ${
-                          tonnageScale === scale
+                        className={`p-2.5 rounded-xl text-center text-xs font-semibold border transition-all cursor-pointer ${tonnageScale === scale
                             ? "bg-gradient-to-r from-yellow-400 to-amber-500 text-slate-950 font-bold border-yellow-500 shadow-sm"
                             : "bg-white border-gray-200 text-gray-700 hover:border-yellow-300"
-                        }`}
+                          }`}
                       >
                         {scale}
                       </button>
@@ -293,11 +288,10 @@ export default function QuoteModal({
                     ].map((time) => (
                       <label
                         key={time}
-                        className={`flex items-center gap-3 p-3 rounded-xl border text-xs font-medium cursor-pointer transition-all ${
-                          procurementTimeline === time
+                        className={`flex items-center gap-3 p-3 rounded-xl border text-xs font-medium cursor-pointer transition-all ${procurementTimeline === time
                             ? "bg-yellow-50 border-yellow-400 text-yellow-950 font-semibold"
                             : "bg-white border-gray-200 text-gray-700 hover:border-yellow-300"
-                        }`}
+                          }`}
                       >
                         <input
                           type="radio"

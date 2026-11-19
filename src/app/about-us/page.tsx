@@ -81,29 +81,60 @@ export default function AboutUsPage() {
   return (
     <div className="pt-24 bg-white min-h-screen">
       
-      {/* Page Header (White & Yellow Gradient) */}
-      <section className="bg-gradient-to-b from-yellow-100/70 via-amber-50/40 to-white text-gray-900 py-16 sm:py-20 relative overflow-hidden border-b border-yellow-200/60">
-        <div className="absolute inset-0 z-0 opacity-15 mix-blend-multiply pointer-events-none">
-          <Image
-            src="/images/infrastructure-road.jpg"
-            alt="Ethiopian Infrastructure"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* Page Hero with Dedicated Picture (White & Yellow Gradient) */}
+      <section className="bg-gradient-to-b from-yellow-50/80 via-amber-50/30 to-white text-gray-900 pt-10 pb-16 relative overflow-hidden border-b border-yellow-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-4">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-yellow-800 uppercase tracking-widest bg-yellow-100 px-3.5 py-1.5 rounded-full border border-yellow-300">
+                <Sparkles className="w-3.5 h-3.5 text-yellow-600" />
+                <span>About GeoCarve Ethiopia</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900 leading-tight">
+                Connecting Ethiopia&apos;s Industries with International Machinery
+              </h1>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                GeoCarve is an Ethiopian heavy machinery import and sales company committed to connecting the country&apos;s growing industries with dependable machinery from leading international manufacturers.
+              </p>
+              <div className="pt-2 flex flex-wrap gap-3">
+                <button
+                  onClick={() => setIsQuoteModalOpen(true)}
+                  className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 hover:brightness-105 text-slate-950 font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider shadow-md shadow-yellow-500/20 cursor-pointer"
+                >
+                  Request Consultation
+                </button>
+                <a
+                  href="tel:+251911234567"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-yellow-50 text-gray-900 font-bold px-5 py-3 rounded-full text-xs uppercase tracking-wider border-2 border-yellow-300 shadow-sm"
+                >
+                  <PhoneCall className="w-4 h-4 text-yellow-600" />
+                  <span>0911 234 567</span>
+                </a>
+              </div>
+            </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-yellow-800 uppercase tracking-widest bg-yellow-400/20 px-3.5 py-1.5 rounded-full border border-yellow-300">
-            <Sparkles className="w-3.5 h-3.5 text-yellow-600" />
-            <span>About Us</span>
+            <div className="lg:col-span-6 relative aspect-[16/10] rounded-3xl overflow-hidden border-2 border-yellow-300 shadow-xl bg-yellow-50">
+              <Image
+                src="/images/hero-geocarve.jpg"
+                alt="GeoCarve Ethiopian Engineers & Commercial Leadership"
+                fill
+                priority
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-xl border border-yellow-300 flex items-center justify-between shadow-md">
+                <span className="text-gray-900 text-xs font-bold">
+                  Addis Ababa Headquarters &amp; Operations
+                </span>
+                <span className="text-yellow-800 text-[11px] font-mono font-bold bg-yellow-100 px-2 py-0.5 rounded border border-yellow-200">
+                  Ethiopia
+                </span>
+              </div>
+            </div>
+
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900">
-            About GeoCarve Heavy Machinery
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Connecting Ethiopia&apos;s growing industries with reliable machinery from leading international manufacturers. Let&apos;s carve our future together.
-          </p>
         </div>
       </section>
 
@@ -111,11 +142,11 @@ export default function AboutUsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
         
         {/* Profile Card (2-column rounded-3xl card with yellow gradient accents) */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-yellow-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border-2 border-yellow-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 relative aspect-square rounded-2xl overflow-hidden bg-yellow-50 shadow-md border border-yellow-200">
             <Image
-              src="/images/hero-geocarve.jpg"
-              alt="GeoCarve Ethiopian Engineers"
+              src="/images/partnership-handover.jpg"
+              alt="GeoCarve Equipment Partnership"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"
@@ -135,16 +166,16 @@ export default function AboutUsPage() {
               Who We Are
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-snug">
-              Connecting Ethiopia&apos;s Industries with International Machinery
+              Built on Trust, Transparency, and Engineering Excellence
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              GeoCarve is an Ethiopian heavy machinery import and sales company committed to connecting the country&apos;s growing industries with machinery from international manufacturers.
-            </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               We specialize in importing and supplying heavy equipment to meet the needs of construction companies, contractors, mining operations, government institutions, industrial businesses, real estate developers, and individual machinery buyers throughout Ethiopia.
             </p>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               We understand that heavy machinery represents a significant investment and plays an essential role in the success of projects and business operations. Our approach is therefore centered on providing access to suitable equipment, maintaining transparent business relationships, and making the machinery purchasing process as straightforward as possible.
+            </p>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              By bringing multiple international machinery brands to the Ethiopian market, we aim to provide customers with equipment choices that reflect their operational requirements, project specifications, and investment considerations.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4">
@@ -154,13 +185,13 @@ export default function AboutUsPage() {
               >
                 Request Equipment Consultation
               </button>
-              <a
-                href="tel:+251911234567"
+              <Link
+                href="/machinery"
                 className="inline-flex items-center gap-2 border-2 border-yellow-300 text-gray-800 hover:bg-yellow-50 px-6 py-3 rounded-full font-bold text-sm transition-all"
               >
-                <PhoneCall className="w-4 h-4 text-yellow-600" />
-                <span>Call 0911 234 567</span>
-              </a>
+                <span>Browse Fleet Catalog</span>
+                <ArrowRight className="w-4 h-4 text-yellow-600" />
+              </Link>
             </div>
           </div>
         </div>
@@ -237,7 +268,7 @@ export default function AboutUsPage() {
           </div>
         </div>
 
-        {/* Our Commitment Card (White & Yellow Gradient instead of dark slate) */}
+        {/* Our Commitment Card */}
         <div className="bg-gradient-to-br from-yellow-100/90 via-amber-50 to-white rounded-3xl p-8 sm:p-12 text-gray-900 border-2 border-yellow-300 shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 space-y-4">
             <span className="text-yellow-800 text-xs font-bold uppercase tracking-wider bg-yellow-200/80 px-3 py-1 rounded-full border border-yellow-300">

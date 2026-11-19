@@ -36,29 +36,50 @@ export default function ContactPage() {
   return (
     <div className="pt-24 bg-white min-h-screen">
       
-      {/* Page Header (White & Yellow Gradient) */}
-      <section className="bg-gradient-to-b from-yellow-100/70 via-amber-50/40 to-white text-gray-900 py-16 sm:py-20 relative overflow-hidden border-b border-yellow-200/60">
-        <div className="absolute inset-0 z-0 opacity-15 mix-blend-multiply pointer-events-none">
-          <Image
-            src="/images/hero-geocarve.jpg"
-            alt="GeoCarve Team"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* Page Hero with Dedicated Office & Consultation Picture */}
+      <section className="bg-gradient-to-b from-yellow-50/80 via-amber-50/30 to-white text-gray-900 pt-10 pb-16 relative overflow-hidden border-b border-yellow-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-4">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-yellow-800 uppercase tracking-widest bg-yellow-100 px-3.5 py-1.5 rounded-full border border-yellow-300">
+                <Sparkles className="w-3.5 h-3.5 text-yellow-600" />
+                <span>Ethiopia Commercial Desk</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900 leading-tight">
+                Contact GeoCarve Ethiopia
+              </h1>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Reach out to our Addis Ababa headquarters for machinery consultations, proforma invoices, LC guidance, or depot yard inspections.
+              </p>
+              <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-yellow-900 pt-1">
+                <span className="bg-yellow-100 px-3 py-1 rounded-full border border-yellow-200">Bole Cameroon Street</span>
+                <span className="bg-yellow-100 px-3 py-1 rounded-full border border-yellow-200">Kality / Modjo Yard</span>
+                <span className="bg-yellow-100 px-3 py-1 rounded-full border border-yellow-200">4-Hour Response Guarantee</span>
+              </div>
+            </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-yellow-800 uppercase tracking-widest bg-yellow-400/20 px-3.5 py-1.5 rounded-full border border-yellow-300">
-            <Sparkles className="w-3.5 h-3.5 text-yellow-600" />
-            <span>Ethiopia Commercial Desk</span>
+            <div className="lg:col-span-6 relative aspect-[16/10] rounded-3xl overflow-hidden border-2 border-yellow-300 shadow-xl bg-yellow-50">
+              <Image
+                src="/images/partnership-handover.jpg"
+                alt="GeoCarve Client Consultation in Addis Ababa"
+                fill
+                priority
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-xl border border-yellow-300 flex items-center justify-between shadow-md">
+                <span className="text-gray-900 text-xs font-bold">
+                  Direct Partnership &amp; Commercial Advisory
+                </span>
+                <span className="text-yellow-800 text-[11px] font-mono font-bold bg-yellow-100 px-2 py-0.5 rounded border border-yellow-200">
+                  Open Mon–Sat
+                </span>
+              </div>
+            </div>
+
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900">
-            Contact GeoCarve Ethiopia
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Reach out to our Addis Ababa team for machinery consultations, proforma requests, or depot inspections.
-          </p>
         </div>
       </section>
 

@@ -113,29 +113,60 @@ export default function ServicesPage() {
   return (
     <div className="pt-24 bg-white min-h-screen">
       
-      {/* Page Header (White & Yellow Gradient) */}
-      <section className="bg-gradient-to-b from-yellow-100/70 via-amber-50/40 to-white text-gray-900 py-16 sm:py-20 relative overflow-hidden border-b border-yellow-200/60">
-        <div className="absolute inset-0 z-0 opacity-15 mix-blend-multiply pointer-events-none">
-          <Image
-            src="/images/technical-support.jpg"
-            alt="Technical workshop"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+      {/* Page Hero with Dedicated Workshop & Diagnostics Picture */}
+      <section className="bg-gradient-to-b from-yellow-50/80 via-amber-50/30 to-white text-gray-900 pt-10 pb-16 relative overflow-hidden border-b border-yellow-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <div className="lg:col-span-6 space-y-4">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-yellow-800 uppercase tracking-widest bg-yellow-100 px-3.5 py-1.5 rounded-full border border-yellow-300">
+                <Sparkles className="w-3.5 h-3.5 text-yellow-600" />
+                <span>Capabilities &amp; Services</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900 leading-tight">
+                What We Do: Heavy Machinery Solutions
+              </h1>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                From international factory sourcing and LC handling to nationwide delivery and developing after-sales support across all Ethiopian regions.
+              </p>
+              <div className="pt-2 flex flex-wrap gap-3">
+                <button
+                  onClick={() => handleOpenQuote()}
+                  className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 hover:brightness-105 text-slate-950 font-bold px-6 py-3 rounded-full text-xs uppercase tracking-wider shadow-md shadow-yellow-500/20 cursor-pointer"
+                >
+                  Inquire About Sourcing
+                </button>
+                <Link
+                  href="/import-journey"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-yellow-50 text-gray-900 font-bold px-5 py-3 rounded-full text-xs uppercase tracking-wider border-2 border-yellow-300 shadow-sm"
+                >
+                  <span>Explore 5-Stage Journey</span>
+                  <ArrowRight className="w-4 h-4 text-yellow-600" />
+                </Link>
+              </div>
+            </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-yellow-800 uppercase tracking-widest bg-yellow-400/20 px-3.5 py-1.5 rounded-full border border-yellow-300">
-            <Sparkles className="w-3.5 h-3.5 text-yellow-600" />
-            <span>Capabilities &amp; Services</span>
+            <div className="lg:col-span-6 relative aspect-[16/10] rounded-3xl overflow-hidden border-2 border-yellow-300 shadow-xl bg-yellow-50">
+              <Image
+                src="/images/technical-support.jpg"
+                alt="Technical Workshop and Diagnostics in Ethiopia"
+                fill
+                priority
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-xl border border-yellow-300 flex items-center justify-between shadow-md">
+                <span className="text-gray-900 text-xs font-bold">
+                  Hydraulic Diagnostics &amp; Assembly Quality Control
+                </span>
+                <span className="text-yellow-800 text-[11px] font-mono font-bold bg-yellow-100 px-2 py-0.5 rounded border border-yellow-200">
+                  Technical Center
+                </span>
+              </div>
+            </div>
+
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900">
-            What We Do: Heavy Machinery Solutions
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            From international factory sourcing and LC handling to nationwide delivery and developing after-sales support.
-          </p>
         </div>
       </section>
 
